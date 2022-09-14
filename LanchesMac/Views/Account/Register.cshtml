@@ -1,0 +1,57 @@
+﻿@model LoginViewModel
+
+<!-- Section: Design Block -->
+<section class="">
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Cadastre seu Usuário
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            Registre-se apenas uma vez e já comece a usar nosso benefícios e vantagens.
+            Rápido, fácil e seguro, sem preocupações na hora do pagamento.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form asp-controller="Account" asp-action="Register" method="post">
+
+                <!-- email input -->
+                <div class="form-outline mb-4">
+                  <label asp-for="UserName" class="form-label"></label>
+                  <input asp-for="UserName" class="form-control" />
+                  <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <!-- senha input -->
+                <div class="form-outline mb-4">
+                  <label asp-for="Password" class="form-label"></label>
+                  <input asp-for="Password" type="password" class="form-control" />
+                  <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <hr/>
+                <div asp-validation-summary="All"></div>
+
+                <!-- Submit button -->
+                <div class="form-outline mb-4">
+                    <input type="submit" class="btn btn-success btn-lg" value="Cadastrar-se"/>
+                </div>
+
+                <a href="#!" class="small text-muted">Terms of use.</a>
+                <a href="#!" class="small text-muted">Privacy policy</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

@@ -1,0 +1,20 @@
+﻿@model LancheListViewModel
+
+    <div>
+        <h2>@Model.CategoriaAtual</h2>
+    </div>
+
+    <!--<h2>@TempData["Nome"];</h2>-->
+
+<div class="container">
+    
+    <div class="row">
+
+        @foreach(var lanche in Model.Lanches)
+        {
+            <partial name="_LanchesResumo" for="@lanche"/>
+        }
+
+    </div>
+
+</div>
